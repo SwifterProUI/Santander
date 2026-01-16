@@ -21,7 +21,7 @@ on:
 jobs:
   build:
     name: Build
-    runs-on: macos-12
+    runs-on: macos-14
 
     steps:
       - name: Checkout
@@ -34,9 +34,9 @@ jobs:
           cache: true
           cache-path: ~/__cache
 
-      - name: Select Xcode version (14.0)
+      - name: Select Xcode version (15.0.1)
         run: |
-          sudo xcode-select --switch /Applications/Xcode_14.0.app
+          sudo xcode-select --switch /Applications/Xcode_15.0.1.app
 
       - name: Build IPA
         run: |
